@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AXEPHIR — Solutions numériques & logiciels métier</title>
+<meta name="description" content="AXEPHIR conçoit des solutions web, logiciels métier et automatisations pour indépendants, TPE et professionnels.">
+<style>
+:root{
+  --navy:#082a4a; --navy2:#0b3a64; --orange:#ff6b2c; --orange2:#ff8a55;
+  --ink:#102438; --muted:#637487; --bg:#f6f9fc; --white:#fff; --line:#e4ebf2;
+  --shadow:0 18px 50px rgba(8,42,74,.10); --radius:24px; --max:1220px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{text-decoration:none;color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(8,42,74,.07)}
+.navbar{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em;font-size:1.8rem;color:var(--navy)}
+.brand .phi{font-family:Georgia,serif;color:var(--orange);font-weight:500;font-size:1.45rem;margin-left:2px}
+nav{display:flex;align-items:center;gap:28px;font-size:.94rem;font-weight:700}
+nav a:hover{color:var(--orange)} .nav-cta{padding:11px 18px;border-radius:999px;background:var(--orange);color:white!important}
+.hero{background:linear-gradient(120deg,#061f37 0%,#0a3559 54%,#0e466f 100%);color:white;overflow:hidden;position:relative}
+.hero:after{content:"φ";position:absolute;right:-35px;top:-135px;font:500 520px/1 Georgia,serif;color:rgba(255,255,255,.035)}
+.hero-grid{min-height:650px;display:grid;grid-template-columns:1.06fr .94fr;align-items:center;gap:55px;padding:74px 0}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;padding:8px 12px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.07);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.eyebrow i{width:8px;height:8px;background:var(--orange);border-radius:50%}
+h1{font-size:clamp(3.1rem,6vw,5.7rem);line-height:.96;letter-spacing:-.065em;margin:22px 0 24px;max-width:790px}
+h1 span{color:var(--orange)}
+.hero p{font-size:1.15rem;color:#d5e2ec;max-width:650px;margin:0 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:12px;font-weight:800;border:1px solid transparent;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--orange);color:#fff}.btn-light{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
+.proofs{display:flex;gap:28px;flex-wrap:wrap;margin-top:38px}.proof{display:flex;gap:10px;align-items:center;color:#d5e2ec;font-size:.9rem}.proof b{color:#fff}.dot-icon{width:34px;height:34px;border-radius:10px;background:rgba(255,107,44,.14);display:grid;place-items:center;color:#ff8a55}
+.hero-visual{position:relative;z-index:2}.screen{background:#fff;border-radius:22px;box-shadow:0 32px 80px rgba(0,0,0,.32);padding:13px;transform:rotate(1.2deg)}
+.browser{border-radius:15px;overflow:hidden;background:#f7f9fc;color:var(--ink);min-height:385px}.browser-top{height:42px;background:#fff;border-bottom:1px solid #e7edf3;display:flex;align-items:center;padding:0 15px;gap:6px}.browser-top i{width:8px;height:8px;border-radius:50%;background:#d8e0e8}
+.dash{display:grid;grid-template-columns:95px 1fr;min-height:343px}.side{background:#0a3154;padding:18px 12px}.side-logo{font-size:.7rem;color:#fff;font-weight:900;margin-bottom:22px}.side-line{height:8px;background:rgba(255,255,255,.18);border-radius:8px;margin:12px 0}.side-line.active{background:var(--orange)}
+.content{padding:22px}.content h3{margin:0 0 18px;font-size:1.1rem}.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.kpi{padding:14px;background:white;border:1px solid #e8edf3;border-radius:12px}.kpi small{color:#8391a0}.kpi strong{display:block;font-size:1.3rem;color:var(--navy);margin-top:4px}.chart{height:130px;margin-top:16px;border-radius:14px;background:linear-gradient(180deg,#eef7ff,#fff);position:relative;overflow:hidden}.chart:after{content:"";position:absolute;inset:42px 12px 25px;background:linear-gradient(155deg,transparent 0 19%,#ff6b2c 20% 22%,transparent 23% 39%,#ff6b2c 40% 42%,transparent 43% 60%,#ff6b2c 61% 63%,transparent 64%)}
+section{padding:88px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:36px}.kicker{color:var(--orange);font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.12em}.section-head h2,.custom h2,.beyond h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.05;letter-spacing:-.05em;margin:8px 0 0;color:var(--navy)}.section-head p{max-width:510px;color:var(--muted);margin:0}
+.solutions{background:#fff}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}.card{grid-column:span 2;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 10px 35px rgba(8,42,74,.06);transition:.22s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.card:nth-child(4),.card:nth-child(5){grid-column:span 3}
+.card-visual{height:180px;padding:18px;background:linear-gradient(145deg,#edf4fa,#f9fbfd);display:flex;align-items:center;justify-content:center}.mini-ui{width:92%;height:140px;border-radius:10px;background:#fff;box-shadow:0 12px 30px rgba(8,42,74,.13);overflow:hidden}.mini-bar{height:24px;background:var(--navy)}.mini-body{padding:12px}.mini-title{width:45%;height:8px;background:#d8e4ee;border-radius:8px;margin-bottom:12px}.mini-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}.mini-box{height:42px;border-radius:7px;background:#eef3f7;border-left:3px solid var(--orange)}.card-body{padding:22px}.product{font-size:1.25rem;font-weight:900;color:var(--navy);margin:0}.tag{color:var(--orange);font-weight:800;font-size:.82rem;margin:4px 0 12px}.card p{color:var(--muted);font-size:.94rem;margin:0 0 18px}.link{font-weight:900;color:var(--navy);font-size:.9rem}.link span{color:var(--orange)}
+.indis .mini-ui{background:#fff7f2}.indis .mini-bar{background:var(--orange)}.indis .mini-row{grid-template-columns:repeat(3,1fr)}.indis .mini-box{height:31px;border-left:0;background:#fff;border:1px solid #ffd9c7}
+.custom{background:linear-gradient(120deg,#f4f8fc,#fff);padding:82px 0}.custom-box{background:var(--navy);border-radius:28px;color:white;padding:52px;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center;position:relative;overflow:hidden}.custom-box:after{content:"φ";position:absolute;right:-15px;bottom:-115px;font:420px/1 Georgia,serif;color:rgba(255,255,255,.035)}.custom h2{color:white}.custom p{color:#cbdbe7;max-width:670px}.question{position:relative;z-index:2;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:25px}.question strong{font-size:1.1rem}.question p{font-size:.9rem;margin-bottom:0}
+.beyond{background:#fff}.beyond-box{display:grid;grid-template-columns:.82fr 1.18fr;gap:42px;align-items:center;background:#f7f3ed;border-radius:28px;padding:48px}.beyond-card{background:white;border-radius:20px;padding:30px;box-shadow:var(--shadow)}.beyond-card .product{font-size:1.6rem}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.chip{font-size:.78rem;font-weight:800;padding:7px 10px;background:#f1f4f7;border-radius:999px;color:#566778}
+.about{background:#082a4a;color:white}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.05;letter-spacing:-.05em;margin:8px 0 18px}.about p{color:#cbd9e5}.values{display:grid;grid-template-columns:1fr 1fr;gap:14px}.value{padding:18px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.05)}.value strong{display:block;margin-bottom:4px}.value small{color:#b8cad9}
+footer{background:#061d33;color:#b8c9d7;padding:34px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-brand{font-size:1.25rem;font-weight:900;color:#fff}.footer-brand span{font-family:Georgia,serif;color:var(--orange);font-weight:400}
+@media(max-width:950px){nav{display:none}.hero-grid,.custom-box,.beyond-box,.about-grid{grid-template-columns:1fr}.hero-grid{padding:58px 0}.hero-visual{max-width:650px}.grid{grid-template-columns:1fr 1fr}.card,.card:nth-child(4),.card:nth-child(5){grid-column:span 1}.section-head{align-items:start;flex-direction:column}.custom-box{padding:34px}}
+@media(max-width:620px){.wrap{width:min(100% - 26px,var(--max))}.grid{grid-template-columns:1fr}.hero-grid{min-height:auto}.hero-visual{display:none}h1{font-size:3.25rem}.proofs{gap:14px}.custom-box,.beyond-box{padding:26px}.values{grid-template-columns:1fr}section{padding:65px 0}.brand{font-size:1.55rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap navbar">
+    <a class="brand" href="#top">AXEPHIR <span class="phi">φ</span></a>
+    <nav>
+      <a href="#solutions">Nos solutions</a><a href="#sur-mesure">Sur mesure</a><a href="#au-dela">Au-delà des logiciels</a><a href="#apropos">À propos</a>
+      <a class="nav-cta" href="mailto:contact@axephir.fr">Nous contacter</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><i></i> Solutions numériques pensées pour le terrain</div>
+      <h1>Des outils concrets pour des entreprises <span>plus sereines.</span></h1>
+      <p>Nous concevons des solutions web, des logiciels métier et des automatisations destinés aux indépendants, TPE et professionnels pour simplifier leur quotidien et leur faire gagner du temps.</p>
+      <div class="actions"><a class="btn btn-primary" href="#solutions">Découvrir nos solutions →</a><a class="btn btn-light" href="#sur-mesure">Un besoin métier ?</a></div>
+      <div class="proofs">
+        <div class="proof"><span class="dot-icon">◆</span><span><b>Solutions métier</b><br>concrètes</span></div>
+        <div class="proof"><span class="dot-icon">↗</span><span><b>Gain de temps</b><br>au quotidien</span></div>
+        <div class="proof"><span class="dot-icon">◎</span><span><b>Conçues à partir</b><br>du terrain</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="screen"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="dash"><div class="side"><div class="side-logo">AXEPHIR φ</div><div class="side-line active"></div><div class="side-line"></div><div class="side-line"></div><div class="side-line"></div></div><div class="content"><h3>Une gamme d'outils métier</h3><div class="kpis"><div class="kpi"><small>Gestion</small><strong>Simple</strong></div><div class="kpi"><small>Process</small><strong>Clairs</strong></div><div class="kpi"><small>Temps</small><strong>Gagné</strong></div></div><div class="chart"></div></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="solutions" id="solutions">
+<div class="wrap">
+  <div class="section-head"><div><div class="kicker">Nos solutions</div><h2>Des logiciels conçus pour résoudre de vrais problèmes.</h2></div><p>Chaque outil part d'un besoin métier concret : simplifier un processus, structurer un dossier, automatiser une tâche ou mieux piloter une activité.</p></div>
+  <div class="grid">
+    <article class="card"><div class="card-visual"><div class="mini-ui"><div class="mini-bar"></div><div class="mini-body"><div class="mini-title"></div><div class="mini-row"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div></div></div></div><div class="card-body"><h3 class="product">Axe Flow</h3><div class="tag">Gestion des impayés</div><p>Ouvrez votre dossier impayé, suivez les relances, la mise en demeure et l'injonction de payer dans un parcours structuré.</p><a class="link" href="#">Voir la démo <span>→</span></a></div></article>
+    <article class="card"><div class="card-visual"><div class="mini-ui"><div class="mini-bar"></div><div class="mini-body"><div class="mini-title"></div><div class="mini-row"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div></div></div></div><div class="card-body"><h3 class="product">Axe Compta</h3><div class="tag">Assistant de clôture comptable</div><p>De l'import de la balance, du grand livre ou du FEC jusqu'aux contrôles, écritures à examiner et dossier de révision.</p><a class="link" href="#">Voir la démo <span>→</span></a></div></article>
+    <article class="card"><div class="card-visual"><div class="mini-ui"><div class="mini-bar"></div><div class="mini-body"><div class="mini-title"></div><div class="mini-row"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div></div></div></div><div class="card-body"><h3 class="product">Axe Admin</h3><div class="tag">Gestion administrative</div><p>Une direction administrative externalisée et des outils pour structurer, suivre et automatiser les tâches des TPE et indépendants.</p><a class="link" href="#">Découvrir <span>→</span></a></div></article>
+    <article class="card"><div class="card-visual"><div class="mini-ui"><div class="mini-bar"></div><div class="mini-body"><div class="mini-title"></div><div class="mini-row"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div></div></div></div><div class="card-body"><h3 class="product">CleanUp Manager</h3><div class="tag">Logiciel de conciergerie</div><p>Planning, logements, interventions, prestations, devis, factures et suivi propriétaire réunis dans un même outil métier.</p><a class="link" href="#">Découvrir <span>→</span></a></div></article>
+    <article class="card indis"><div class="card-visual"><div class="mini-ui"><div class="mini-bar"></div><div class="mini-body"><div class="mini-title"></div><div class="mini-row"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div></div></div></div><div class="card-body"><h3 class="product">Les Indispensables du propriétaire</h3><div class="tag">9 outils terrain</div><p>Diagnostic, annonce, livret et guide d'accueil, étude d'investissement, contrats et outils pratiques pour la location saisonnière.</p><a class="link" href="#">Découvrir les 9 outils <span>→</span></a></div></article>
+  </div>
+</div>
+</section>
+
+<section class="custom" id="sur-mesure">
+<div class="wrap"><div class="custom-box"><div><div class="kicker">Sur mesure</div><h2>Vous avez un besoin métier particulier ?</h2><p>Un fichier Excel devenu ingérable, des ressaisies, des documents répétitifs, un suivi manuel ou une tâche administrative qui vous fait perdre du temps ? Nous étudions votre fonctionnement pour imaginer un outil adapté à votre activité réelle.</p><div class="actions"><a class="btn btn-primary" href="mailto:contact@axephir.fr?subject=Mon%20besoin%20m%C3%A9tier">Parler de votre projet →</a></div></div><div class="question"><strong>Quel est le fichier Excel ou la tâche administrative dont vous aimeriez vous débarrasser ?</strong><p>C'est souvent là que commence un bon outil métier.</p></div></div></div>
+</section>
+
+<section class="beyond" id="au-dela">
+<div class="wrap beyond-box"><div><div class="kicker">Au-delà des logiciels</div><h2>L'expérience du terrain nourrit aussi nos solutions.</h2><p style="color:var(--muted)">Certains besoins ne demandent pas un logiciel mais une situation à comprendre, des pièces à remettre en ordre et une suite à structurer.</p></div><article class="beyond-card"><h3 class="product">Axe Dossier</h3><div class="tag">Analyse · Structure · Rédaction</div><p>Quand un dossier devient illisible, bloqué ou contradictoire, Axe Dossier reprend les faits, clarifie la situation et structure la suite de manière exploitable.</p><div class="chips"><span class="chip">Successions</span><span class="chip">Litiges</span><span class="chip">Banque</span><span class="chip">Administratif</span><span class="chip">Dossiers complexes</span></div><a class="link" href="#">Découvrir Axe Dossier <span>→</span></a></article></div>
+</section>
+
+<section class="about" id="apropos">
+<div class="wrap about-grid"><div><div class="kicker">AXEPHIR φ</div><h2>Comprendre le métier avant de construire l'outil.</h2><p>AXEPHIR conçoit des solutions numériques à partir de problématiques rencontrées dans la gestion, l'administratif et l'organisation quotidienne des professionnels. L'objectif reste le même : transformer une tâche complexe ou chronophage en un parcours simple et utile.</p></div><div class="values"><div class="value"><strong>Terrain</strong><small>Des outils issus de besoins réels.</small></div><div class="value"><strong>Simplicité</strong><small>Pas de complexité inutile.</small></div><div class="value"><strong>Sur mesure</strong><small>La solution s'adapte au métier.</small></div><div class="value"><strong>Résultat</strong><small>Du temps gagné et un travail mieux structuré.</small></div></div></div>
+</section>
+</main>
+
+<footer><div class="wrap footer-row"><div><div class="footer-brand">AXEPHIR <span>φ</span></div><small>Solutions numériques pensées pour le terrain.</small></div><div><small>© 2026 AXEPHIR · Mentions légales · Contact</small></div></div></footer>
+</body>
+</html>
