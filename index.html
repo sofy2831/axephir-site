@@ -68,10 +68,22 @@ footer{background:#061d33;color:#b8c9d7;padding:34px 0}.footer-row{display:flex;
 .indis-copy{margin-top:18px}
 .indis-copy h3{font-size:1.65rem;color:var(--navy);margin:0 0 8px}
 .indis-copy p{color:var(--muted);margin:0}
-.hero .screen.real-hero{padding:10px;transform:rotate(1deg)}
+.hero .screen.real-hero{padding:10px;transform:none}
 .hero .screen.real-hero img{display:block;width:100%;height:390px;object-fit:cover;object-position:top;border-radius:15px}
 @media(max-width:950px){.proof-grid,.indis-grid{grid-template-columns:1fr}.card.featured{grid-column:span 1}}
 @media(max-width:620px){.real-preview,.card.featured .real-preview{height:180px}.proof-panel img{height:230px}.indis-result img{height:300px}}
+
+/* --- V3 : retour à la maquette AXEPHIR --- */
+.indis-lite{background:#fff;padding:76px 0}
+.indis-lite-box{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center;padding:44px 48px;border-radius:28px;background:linear-gradient(120deg,#fff7f1,#fff);border:1px solid #f2e5dc;box-shadow:0 14px 42px rgba(8,42,74,.06)}
+.indis-lite h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.05;letter-spacing:-.05em;color:var(--navy);margin:8px 0 16px}
+.indis-lite p{color:var(--muted);margin:0 0 24px}
+.tool-list{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.tool-list span{min-height:68px;display:flex;align-items:center;padding:13px 14px;background:#fff;border:1px solid #eadfd7;border-radius:14px;color:var(--navy);font-size:.86rem;font-weight:800;box-shadow:0 7px 20px rgba(8,42,74,.05)}
+.tool-list span:before{content:"✓";color:var(--orange);font-weight:900;margin-right:8px}
+@media(max-width:950px){.indis-lite-box{grid-template-columns:1fr}.tool-list{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.indis-lite-box{padding:28px 22px}.tool-list{grid-template-columns:1fr 1fr}}
+
 </style>
 </head>
 <body>
@@ -79,7 +91,7 @@ footer{background:#061d33;color:#b8c9d7;padding:34px 0}.footer-row{display:flex;
   <div class="wrap navbar">
     <a class="brand" href="#top">AXEPHIR <span class="phi">φ</span></a>
     <nav>
-      <a href="#solutions">Nos solutions</a><a href="#sur-mesure">Sur mesure</a><a href="#au-dela">Au-delà des logiciels</a><a href="#apropos">À propos</a>
+      <a href="#solutions">Nos solutions</a><a href="#sur-mesure">Sur mesure</a><a href="#apropos">À propos</a>
       <a class="nav-cta" href="mailto:contact@axephir.fr">Nous contacter</a>
     </nav>
   </div>
@@ -115,81 +127,67 @@ footer{background:#061d33;color:#b8c9d7;padding:34px 0}.footer-row{display:flex;
       <div class="real-preview"><img src="assets/axe-flow.png" alt="Aperçu réel Axe Flow"></div>
       <div class="card-body"><h3 class="product">Axe Flow</h3><div class="tag">Gestion des impayés</div>
       <p>Relances, mise en demeure, injonction de payer et suivi du règlement réunis dans un parcours guidé.</p>
-      <a class="link" href="https://flow.axe-dossier.fr/">Voir Axe Flow <span>→</span></a></div>
+      <a class="link" href="https://flow.axe-dossier.fr/" target="_blank" rel="noopener">Voir Axe Flow <span>→</span></a></div>
     </article>
     <article class="card featured">
       <div class="real-preview"><img src="assets/axe-compta.png" alt="Aperçu réel Axe Compta"></div>
       <div class="card-body"><h3 class="product">Axe Compta</h3><div class="tag">Assistant de clôture comptable</div>
       <p>Import balance, grand livre ou FEC, contrôles, écritures d'inventaire à examiner et dossier de révision.</p>
-      <a class="link" href="#" aria-label="Axe Compta">Découvrir <span>→</span></a></div>
+      <a class="link" href="https://compta.axe-dossier.fr/assistant-cloture-comptable.html" target="_blank" rel="noopener">Voir Axe Compta <span>→</span></a></div>
     </article>
     <article class="card featured">
       <div class="real-preview"><img src="assets/cleanup-planning.png" alt="Planning CleanUp Manager"></div>
       <div class="card-body"><h3 class="product">CleanUp Manager</h3><div class="tag">Pilotage de conciergerie</div>
       <p>Planning, logements, prestations, propriétaires, devis, factures, journaux comptables et recouvrement.</p>
-      <a class="link" href="#" aria-label="CleanUp Manager">Découvrir <span>→</span></a></div>
+      <a class="link" href="https://logiciel-conciergerie.cleanup-manager.fr/" target="_blank" rel="noopener">Voir CleanUp Manager <span>→</span></a></div>
     </article>
     <article class="card featured indis">
       <div class="real-preview"><img src="assets/indispensables.png" alt="Les 9 Indispensables du propriétaire"></div>
       <div class="card-body"><h3 class="product">Les Indispensables du propriétaire</h3><div class="tag">9 outils à l'unité</div>
       <p>Annonce, optimisation, guide, livret, contrat, règlement multilingue, budget, diagnostic et étude d'investissement.</p>
-      <a class="link" href="#" aria-label="Les Indispensables">Découvrir les 9 outils <span>→</span></a></div>
+      <a class="link" href="https://conciergerie45.cleanup-manager.fr/les-indispensables-du-proprietaire.html" target="_blank" rel="noopener">Découvrir les 9 outils <span>→</span></a></div>
     </article>
     <article class="card">
       <div class="card-visual"><div class="mini-ui"><div class="mini-bar"></div><div class="mini-body"><div class="mini-title"></div><div class="mini-row"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div></div></div></div>
       <div class="card-body"><h3 class="product">Axe Admin</h3><div class="tag">Direction administrative externalisée</div>
       <p>Un accompagnement administratif pour les TPE et indépendants. La plateforme métier AXEPHIR dédiée à ce besoin est en cours de refonte.</p>
-      <a class="link" href="#" aria-label="Axe Admin">Découvrir <span>→</span></a></div>
+      <a class="link" href="https://admin.axe-dossier.fr/" target="_blank" rel="noopener">Découvrir <span>→</span></a></div>
     </article>
     <article class="card">
       <div class="card-visual"><div class="mini-ui"><div class="mini-bar"></div><div class="mini-body"><div class="mini-title"></div><div class="mini-row"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div></div></div></div>
       <div class="card-body"><h3 class="product">Axe Dossier</h3><div class="tag">Analyse & structuration de dossiers</div>
       <p>Lecture, synthèse et rédaction pour remettre de l'ordre dans un dossier complexe et préparer une suite exploitable.</p>
-      <a class="link" href="#" aria-label="Axe Dossier">Découvrir <span>→</span></a></div>
+      <a class="link" href="https://axe-dossier.fr/" target="_blank" rel="noopener">Découvrir <span>→</span></a></div>
     </article>
   </div>  </div>
 </div>
 </section>
 
-<section class="product-proof">
+
+
+<section class="indis-lite" id="indispensables">
 <div class="wrap">
-  <div class="section-head"><div><div class="kicker">Des outils qui existent déjà</div><h2>Voir le produit, pas seulement sa promesse.</h2></div>
-  <p>AXEPHIR développe des interfaces utilisées pour organiser une activité, produire des documents et guider des parcours métier complets.</p></div>
-  <div class="proof-grid">
-    <article class="proof-panel"><img src="assets/cleanup-compta.png" alt="Module comptabilité CleanUp Manager"><div class="proof-copy">
-      <h3>CleanUp Manager</h3><p>Une conciergerie peut piloter ses logements et prestations, puis retrouver devis, factures, journaux et suivi du recouvrement au même endroit.</p>
-      <div class="badges"><span class="badge">Planning</span><span class="badge">Production</span><span class="badge">Facturation</span><span class="badge">Propriétaires</span></div>
-    </div></article>
-    <article class="proof-panel"><img src="assets/cleanup-proprietaire.png" alt="Espace propriétaire CleanUp Manager"><div class="proof-copy">
-      <h3>Un espace pour chaque acteur</h3><p>La plateforme ne s'arrête pas au back-office : elle structure aussi l'information destinée aux propriétaires.</p>
-      <div class="badges"><span class="badge">Messages</span><span class="badge">Documents</span><span class="badge">Contrats</span><span class="badge">Facturation</span></div>
-    </div></article>
+  <div class="indis-lite-box">
+    <div>
+      <div class="kicker">Location saisonnière</div>
+      <h2>Les Indispensables du propriétaire</h2>
+      <p>9 outils accessibles à l’unité pour préparer, améliorer et piloter une location saisonnière : annonce, optimisation, guide d’accueil, livret voyageur, contrat, règlement intérieur multilingue, budget de lancement, diagnostic de rentabilité et étude d’investissement.</p>
+      <a class="btn btn-primary" href="https://conciergerie45.cleanup-manager.fr/les-indispensables-du-proprietaire.html" target="_blank" rel="noopener">Découvrir les 9 outils →</a>
+    </div>
+    <div class="tool-list">
+      <span>Mon Annonce Pro</span><span>Optimisation annonce</span><span>Guide d’accueil</span>
+      <span>Livret voyageur</span><span>Contrat propriétaire</span><span>Règlement intérieur</span>
+      <span>Budget de lancement</span><span>Diagnostic rentabilité</span><span>Étude d’investissement</span>
+    </div>
   </div>
 </div>
 </section>
 
-<section class="indis-showcase">
-<div class="wrap">
-  <div class="section-head"><div><div class="kicker">Location saisonnière</div><h2>9 outils, de la mise en location à la décision d'investir.</h2></div>
-  <p>Les Indispensables produisent des livrables immédiatement exploitables, sans abonnement obligatoire pour le propriétaire.</p></div>
-  <div class="indis-grid">
-    <div class="indis-main"><img src="assets/mon-annonce-pro.png" alt="Parcours Mon Annonce Pro"><div class="indis-copy">
-      <h3>Un parcours guidé jusqu'au document final</h3><p>Le propriétaire renseigne son logement étape par étape ; CleanUp contrôle les incohérences, structure les informations et prépare le livrable.</p>
-    </div></div>
-    <div class="indis-result"><img src="assets/diagnostic-rentabilite.png" alt="Diagnostic de rentabilité CleanUp"><div class="indis-copy">
-      <h3>Des résultats qui donnent une décision</h3><p>Rentabilité, prix, occupation, saisonnalité, scénarios financiers et recommandations sont présentés dans un rapport structuré.</p>
-    </div></div>
-  </div>
-</div>
-</section>
 
 <section class="custom" id="sur-mesure">
 <div class="wrap"><div class="custom-box"><div><div class="kicker">Sur mesure</div><h2>Vous avez un besoin métier particulier ?</h2><p>Un fichier Excel devenu ingérable, des ressaisies, des documents répétitifs, un suivi manuel ou une tâche administrative qui vous fait perdre du temps ? Nous étudions votre fonctionnement pour imaginer un outil adapté à votre activité réelle.</p><div class="actions"><a class="btn btn-primary" href="mailto:contact@axephir.fr?subject=Mon%20besoin%20m%C3%A9tier">Parler de votre projet →</a></div></div><div class="question"><strong>Quel est le fichier Excel ou la tâche administrative dont vous aimeriez vous débarrasser ?</strong><p>C'est souvent là que commence un bon outil métier.</p></div></div></div>
 </section>
 
-<section class="beyond" id="au-dela">
-<div class="wrap beyond-box"><div><div class="kicker">Notre logique</div><h2>Le logiciel vient après le problème métier.</h2><p style="color:var(--muted)">Nous partons du parcours réel : ce qui prend du temps, ce qui se répète, ce qui se perd entre plusieurs outils et ce qui mérite d’être automatisé.</p></div><article class="beyond-card"><h3 class="product">Du besoin au produit</h3><div class="tag">Observer · Structurer · Automatiser</div><p>AXEPHIR transforme une méthode de travail en parcours numérique clair, avec une priorité : que l’outil soit immédiatement compréhensible par la personne qui l’utilise.</p><div class="chips"><span class="chip">TPE</span><span class="chip">Cabinets</span><span class="chip">Conciergeries</span><span class="chip">Indépendants</span><span class="chip">Métiers spécialisés</span></div></article></div>
-</section>
 
 <section class="about" id="apropos">
 <div class="wrap about-grid"><div><div class="kicker">AXEPHIR φ</div><h2>Comprendre le métier avant de construire l'outil.</h2><p>AXEPHIR conçoit des solutions numériques à partir de problématiques rencontrées dans la gestion, l'administratif et l'organisation quotidienne des professionnels. L'objectif reste le même : transformer une tâche complexe ou chronophage en un parcours simple et utile.</p></div><div class="values"><div class="value"><strong>Terrain</strong><small>Des outils issus de besoins réels.</small></div><div class="value"><strong>Simplicité</strong><small>Pas de complexité inutile.</small></div><div class="value"><strong>Sur mesure</strong><small>La solution s'adapte au métier.</small></div><div class="value"><strong>Résultat</strong><small>Du temps gagné et un travail mieux structuré.</small></div></div></div>
