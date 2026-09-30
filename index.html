@@ -101,6 +101,15 @@ footer{background:#061f3c;color:#c8d5e0;padding:25px 0}.footer{display:flex;just
   width:62px!important;
   height:62px!important;
 }
+/* Alignement du visuel hero sur la même largeur que les cartes */
+@media(min-width:1101px){
+  .hero{
+    width:min(var(--max),calc(100% - 72px));
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
 @media(max-width:760px){
   .product h3{font-size:1.16rem!important;min-height:62px!important}
   .product h3 .metier-icon,
@@ -182,6 +191,15 @@ document.querySelectorAll('[data-demo-pending="true"]').forEach(function(btn){
   width:62px!important;
   height:62px!important;
 }
+/* Alignement du visuel hero sur la même largeur que les cartes */
+@media(min-width:1101px){
+  .hero{
+    width:min(var(--max),calc(100% - 72px));
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
 @media(max-width:760px){
   .product h3{font-size:1.16rem!important;min-height:62px!important}
   .product h3 .metier-icon,
