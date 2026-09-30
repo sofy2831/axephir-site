@@ -109,6 +109,21 @@ footer{background:#061f3c;color:#c8d5e0;padding:25px 0}.footer{display:flex;just
   }
 }
 
+
+/* Harmonisation grands écrans : le contenu reste lisible, le fond habille toute la largeur */
+html{background:#f3f7fa}
+body{background:#f3f7fa}
+header{background:#ffffff}
+.hero{background-color:#eef4f8}
+section#solutions{background:linear-gradient(180deg,#ffffff 0%,#f7fafc 100%)}
+.custom{background:linear-gradient(90deg,#fff3ea 0%,#fff9f5 50%,#fff3ea 100%)}
+.about{background:linear-gradient(115deg,#082b57 0%,#0b4478 58%,#0a3765 100%)}
+footer{background:#061f3c}
+@media(min-width:1800px){
+  .wrap{width:min(1680px,calc(100% - 120px))}
+  .hero-copy{width:48%;}
+}
+
 </style>
 </head>
 <body>
