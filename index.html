@@ -109,6 +109,52 @@ footer{background:#061f3c;color:#c8d5e0;padding:25px 0}.footer{display:flex;just
   }
 }
 
+
+/* === Lisibilité renforcée +25 % et hero mobile avec photo visible === */
+.section-title h2{font-size:3rem!important}
+.section-title p{font-size:1.18rem!important;line-height:1.45!important}
+.product h3{font-size:1.60rem!important;line-height:1.15!important;min-height:82px!important}
+.product h4{font-size:1.16rem!important;line-height:1.35!important}
+.product p,.product li{font-size:1.08rem!important;line-height:1.48!important}
+.product .btn{font-size:1.05rem!important}
+.product h3 .metier-icon,.metier-icon{width:78px!important;height:78px!important;min-width:78px!important;border-radius:17px!important}
+.product h3 .metier-icon svg,.product h3 .metier-icon img{width:78px!important;height:78px!important}
+.feature{font-size:1.12rem!important;line-height:1.35!important}
+.feature b{height:80px!important;font-size:3.75rem!important}
+
+@media(max-width:760px){
+  .hero{
+    min-height:900px!important;
+    padding-bottom:330px!important;
+    background-size:auto 100%!important;
+    background-position:72% center!important;
+    background-repeat:no-repeat!important;
+  }
+  .hero::after{
+    content:'';
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:350px;
+    pointer-events:none;
+    background:linear-gradient(to bottom,rgba(255,255,255,.98) 0%,rgba(255,255,255,.45) 22%,rgba(255,255,255,0) 48%);
+  }
+  .hero-copy{position:relative;z-index:2;min-height:auto!important}
+  .hero h1{font-size:3.45rem!important;line-height:1.02!important}
+  .hero p{font-size:1.22rem!important;line-height:1.48!important}
+  .features{position:relative;z-index:2;gap:18px 10px!important}
+  .feature{font-size:1.05rem!important}
+  .feature b{height:68px!important;font-size:3.35rem!important}
+  .section-title h2{font-size:3rem!important}
+  .section-title p{font-size:1.15rem!important}
+  .product h3{font-size:1.45rem!important;min-height:78px!important}
+  .product h4{font-size:1.18rem!important}
+  .product p,.product li{font-size:1.10rem!important}
+  .product h3 .metier-icon,.metier-icon,
+  .product h3 .metier-icon svg,.product h3 .metier-icon img{
+    width:68px!important;height:68px!important;min-width:68px!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -187,6 +233,52 @@ document.querySelectorAll('[data-demo-pending="true"]').forEach(function(btn){
   .product h3 .metier-icon,
   .product h3 .metier-icon svg{
     width:54px!important;height:54px!important;min-width:54px!important;
+  }
+}
+
+
+/* === Lisibilité renforcée +25 % et hero mobile avec photo visible === */
+.section-title h2{font-size:3rem!important}
+.section-title p{font-size:1.18rem!important;line-height:1.45!important}
+.product h3{font-size:1.60rem!important;line-height:1.15!important;min-height:82px!important}
+.product h4{font-size:1.16rem!important;line-height:1.35!important}
+.product p,.product li{font-size:1.08rem!important;line-height:1.48!important}
+.product .btn{font-size:1.05rem!important}
+.product h3 .metier-icon,.metier-icon{width:78px!important;height:78px!important;min-width:78px!important;border-radius:17px!important}
+.product h3 .metier-icon svg,.product h3 .metier-icon img{width:78px!important;height:78px!important}
+.feature{font-size:1.12rem!important;line-height:1.35!important}
+.feature b{height:80px!important;font-size:3.75rem!important}
+
+@media(max-width:760px){
+  .hero{
+    min-height:900px!important;
+    padding-bottom:330px!important;
+    background-size:auto 100%!important;
+    background-position:72% center!important;
+    background-repeat:no-repeat!important;
+  }
+  .hero::after{
+    content:'';
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:350px;
+    pointer-events:none;
+    background:linear-gradient(to bottom,rgba(255,255,255,.98) 0%,rgba(255,255,255,.45) 22%,rgba(255,255,255,0) 48%);
+  }
+  .hero-copy{position:relative;z-index:2;min-height:auto!important}
+  .hero h1{font-size:3.45rem!important;line-height:1.02!important}
+  .hero p{font-size:1.22rem!important;line-height:1.48!important}
+  .features{position:relative;z-index:2;gap:18px 10px!important}
+  .feature{font-size:1.05rem!important}
+  .feature b{height:68px!important;font-size:3.35rem!important}
+  .section-title h2{font-size:3rem!important}
+  .section-title p{font-size:1.15rem!important}
+  .product h3{font-size:1.45rem!important;min-height:78px!important}
+  .product h4{font-size:1.18rem!important}
+  .product p,.product li{font-size:1.10rem!important}
+  .product h3 .metier-icon,.metier-icon,
+  .product h3 .metier-icon svg,.product h3 .metier-icon img{
+    width:68px!important;height:68px!important;min-width:68px!important;
   }
 }
 
