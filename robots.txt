@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://axephir.axe-dossier.fr/sitemap.xml
