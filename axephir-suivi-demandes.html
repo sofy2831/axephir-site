@@ -39,7 +39,7 @@ function openForm(id){
 function requireAdmin(){if(!currentUser||currentUser.uid!==ADMIN_UID)throw Error('Accès administrateur non autorisé.')}
 $('loginForm').addEventListener('submit',async e=>{
  e.preventDefault();$('loginError').textContent='';$('loginButton').disabled=true;
- try{await signInWithEmailAndPassword(auth,$('loginEmail').value.trim(),$('loginPassword').value)}catch(e){$('loginError').textContent='Connexion impossible. Vérifie ton email et ton mot de passe.'}finally{$('loginButton').disabled=false;$('loginPassword').value=''}
+ try{await signInWithEmailAndPassword(auth,$('loginEmail').value.trim(),$('loginPassword').value)}catch(e){console.error('Firebase Authentication:',e);const code=e?.code||'erreur-inconnue';const details={'auth/invalid-credential':'Identifiants refusés par Firebase pour ce projet. Vérifie le compte dans Authentication > Utilisateurs ou réinitialise son mot de passe.','auth/operation-not-allowed':'La connexion email/mot de passe n’est pas activée dans ce projet.','auth/unauthorized-domain':'Domaine non autorisé dans Firebase Authentication.','auth/network-request-failed':'Connexion réseau impossible ou requête Firebase bloquée.','auth/too-many-requests':'Trop de tentatives : réessaie plus tard.','auth/invalid-api-key':'Clé de configuration Firebase invalide.','auth/user-disabled':'Compte désactivé.'};$('loginError').textContent=(details[code]||'Erreur Firebase pendant la connexion.')+' Code : '+code;}finally{$('loginButton').disabled=false;$('loginPassword').value=''}
 });
 $('logout').onclick=()=>signOut(auth);
 onAuthStateChanged(auth,async user=>{
