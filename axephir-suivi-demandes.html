@@ -103,9 +103,9 @@ $('form').onsubmit=async e=>{
  try{requireAdmin();const id=editing||doc(demandes).id;const x=Object.fromEntries(fields.map(k=>[k,$(k).value]));await setDoc(doc(db,'demandes',id),x,{merge:true});$('editor').close();sync('Demande enregistrée')}
  catch(err){alert('Enregistrement impossible : '+err.message)}finally{btn.disabled=false}
 };
-$('openQuotes').onclick=()=>window.open('axephir-devis.html','_blank');
+$('openQuotes').onclick=()=>window.open('devis.html','_blank');
 $('rows').onclick=async e=>{
- const quote=e.target.closest('[data-quote]');if(quote){window.open('axephir-devis.html?demande='+encodeURIComponent(quote.dataset.quote),'_blank');return;}
+ const quote=e.target.closest('[data-quote]');if(quote){window.open('devis.html?demande='+encodeURIComponent(quote.dataset.quote),'_blank');return;}
  const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');
  if(edit)openForm(edit.dataset.edit);
  if(del&&confirm('Supprimer définitivement cette demande dans Firestore ?'))try{requireAdmin();await deleteDoc(doc(db,'demandes',del.dataset.delete))}catch(err){alert('Suppression impossible : '+err.message)}
