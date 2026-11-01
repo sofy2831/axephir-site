@@ -51,13 +51,27 @@ function budgetLabel(v){
  return s;
 }
 function render(){
- const q=$('search').value.toLocaleLowerCase('fr'),f=$('filter').value;
- const filtered=items.filter(x=>(!f||x.status===f)&&[x.name,x.email,x.project,x.description].some(v=>String(v||'').toLocaleLowerCase('fr').includes(q))).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+ const q=$('search').value.toLocaleLowerCase('fr'), f=$('filter').value, rf=$('followupFilter').value;
+ const today=new Date().toLocaleDateString('en-CA');
+ const active=x=>!['Accepté','Refusé'].includes(x.status);
+ const filtered=items.filter(x=>{
+   if(f&&x.status!==f)return false;
+   if(![x.name,x.email,x.project,x.description].some(v=>String(v||'').toLocaleLowerCase('fr').includes(q)))return false;
+   if(!rf)return true;
+   if(!active(x)||!x.followup)return false;
+   const d=dateISO(x.followup);
+   if(!d)return false;
+   return rf==='today'?d===today:rf==='late'?d<today:rf==='upcoming'?d>today:true;
+ }).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
  $('total').textContent=items.length;
  $('new').textContent=items.filter(x=>x.status==='Nouvelle demande').length;
  $('pending').textContent=items.filter(x=>['Devis à préparer','Devis envoyé'].includes(x.status)).length;
  $('won').textContent=items.filter(x=>x.status==='Accepté').length;
- $('rows').innerHTML=filtered.length?filtered.map(x=>`<tr><td>${esc(x.date)}</td><td><b>${esc(x.name)}</b><small>${esc(x.email)}</small><small>${esc(x.type)}</small></td><td>${esc(x.project)}<small>${esc(x.source)}</small></td><td>${esc(budgetLabel(x.budget))}</td><td><span class="status">${esc(x.status)}</span></td><td>${!x.followup?'—':!active(x)?`<span class="followup-done">${esc(x.followup)} · Clôturé</span>`:x.followup<today?`<span class="followup-late">${esc(x.followup)} · En retard</span>`:x.followup===today?`<span class="followup-due">${esc(x.followup)} · Aujourd’hui</span>`:esc(x.followup)}</td><td><div class="rowbuttons"><button class="secondary" data-edit="${esc(x.id)}">Modifier</button><button class="danger" data-delete="${esc(x.id)}">Supprimer</button></div></td></tr>`).join(''):'<tr><td colspan="7" class="empty">Aucune demande à afficher.</td></tr>';
+ $('rows').innerHTML=filtered.length?filtered.map(x=>{
+  const d=dateISO(x.followup);
+  const relance=!d?'—':!active(x)?`<span class="followup-done">${esc(d)} · Clôturé</span>`:d<today?`<span class="followup-late">${esc(d)} · En retard</span>`:d===today?`<span class="followup-due">${esc(d)} · Aujourd’hui</span>`:esc(d);
+  return `<tr><td>${esc(x.date)}</td><td><b>${esc(x.name)}</b><small>${esc(x.email)}</small><small>${esc(x.type)}</small></td><td>${esc(x.project)}<small>${esc(x.source)}</small></td><td>${esc(budgetLabel(x.budget))}</td><td><span class="status">${esc(x.status)}</span></td><td>${relance}</td><td><div class="rowbuttons"><button class="secondary" data-edit="${esc(x.id)}">Modifier</button><button class="danger" data-delete="${esc(x.id)}">Supprimer</button></div></td></tr>`;
+ }).join(''):'<tr><td colspan="7" class="empty">Aucune demande à afficher.</td></tr>';
 }
 function openForm(id){
  editing=id||null;const x=items.find(x=>x.id===id)||{};
