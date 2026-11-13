@@ -348,6 +348,18 @@ footer{background:#061f3c;color:#c8d5e0;padding:25px 0}.footer{display:flex;just
   .devis-field{margin-bottom:12px}
 }
 </style>
+<style>
+/* Transition accueil / Nos solutions : suppression du vide sous les pictogrammes. */
+.hero{padding-bottom:0}
+#solutions{padding-top:24px}
+@media(max-width:760px){
+  .hero{padding-bottom:0!important;min-height:0!important}
+  .hero-grid,.hero-copy{min-height:0!important}
+  .hero-copy{padding-bottom:12px}
+  .hero::after{display:none}
+  #solutions{padding-top:16px}
+}
+</style>
 </head>
 <body>
 <header><div class="wrap nav"><div class="brand-head"><a aria-label="Axephir - Accueil" class="logo-officiel" href="#"><img alt="Logo Axephir" src="axephir-logo.png"/></a><div class="brand-wordmark">AXEPHIR<span>φ</span></div><div class="brand-head-copy">Création de logiciels et solutions numériques<br/>pour les petites entreprises</div></div><nav class="links"><a class="contact" href="mailto:contact@axephir.fr?subject=Demande%20d%27information%20%E2%80%93%20AXEPHIR&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20solutions.%0A%0AMon%20besoin%20%3A%0A%0ASoci%C3%A9t%C3%A9%20%3A%0AT%C3%A9l%C3%A9phone%20%3A%0A%0AMerci%20de%20me%20recontacter.">✉ Nous contacter</a></nav></div></header>
